@@ -1,0 +1,60 @@
+.g-row {
+  width: 100vw;
+  height: auto;
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2.5rem 0rem;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.g-col {
+  width: 46%;
+  // border: 1px solid green;
+  padding: 1rem;
+  background-color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include respond(tab-port) {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+  }
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.approach {
+  width: 75%;
+  // border: 2px solid red;
+  padding: 2rem;
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  &-heading {
+    // border: 1px solid blue;
+    padding: 1rem;
+    margin: 1rem 0rem;
+  }
+  &-info {
+    // border: 1px solid green;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 2.4rem;
+  }
+}

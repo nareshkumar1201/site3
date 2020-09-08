@@ -1,0 +1,45 @@
+.genInfo {
+  //  border: 1px solid red;
+  width: 100vw;
+  height: 50vh;
+  background-color: $grey-color;
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include respond(tab-port) {
+    height: auto;
+  }
+  @include respond(phone) {
+    height: auto;
+    padding: 1rem;
+  }
+  &-container {
+    width: 85%;
+    //  border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    @include respond(tab-port) {
+      width: 90%;
+      height: auto;
+    }
+    @include respond(phone) {
+      width: 100%;
+      height: auto;
+    }
+    &__heading {
+      font-size: 2rem;
+
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
+    }
+    &__text {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      color: $text-muted;
+    }
+  }
+}

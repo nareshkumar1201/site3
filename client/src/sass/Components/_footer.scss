@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  height: auto;
+
+  &-container {
+    //border: 2px solid white;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $black-custom-1;
+  }
+
+  &-Icons {
+    // border: 1px solid green;
+    color: $white-color;
+    text-align: center;
+  }
+  &-Info {
+    // border: 1px solid blue;
+    padding: 1rem;
+    color: $white-color;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 2rem;
+  }
+}
+
+.fas {
+  //  border: 1px solid red;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.media-icons {
+  font-size: 2.5rem !important;
+  //  border: 1px solid red !important;
+  padding: 1rem !important;
+}

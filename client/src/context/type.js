@@ -1,0 +1,13 @@
+export const ADD_USER_DETAILS = "ADD_USER_DETAILS";
+export const ERROR_ADDING_USER = "ERROR_ADDING_USER";
+export const DELETE_USER_DETAILS = "DELETE_USER_DETAILS";
+export const CLEAR_ALERTS_CONTEXT = "CLEAR_ALERTS_CONTEXT";
+
+//Alerts
+
+export const SHOW_ALERT = "SHOW_ALERT";
+export const CLEAR_ALERT = "CLEAR_ALERT";
+
+//Loading
+
+export const SET_LOADING = "SET_LOADING";

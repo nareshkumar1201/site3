@@ -1,0 +1,262 @@
+.creator {
+  // border: 1px solid red;
+  width: 100vw;
+  height: auto;
+  padding: 2rem;
+  @include respond(phone) {
+    padding: 0rem 0.5rem;
+  }
+
+  &-story {
+    width: 95%;
+    //border: 1px solid green;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: $white-color;
+    box-shadow: 0.2rem 0.4rem 0.3rem rgba($black-custom-1, 0.6);
+    @include respond(phone) {
+      width: 85%;
+      padding: 0rem;
+      margin: 6rem auto;
+      box-shadow: 0rem 0rem 0.3rem rgba($black-custom-1, 0.6);
+    }
+
+    &--info {
+      // border: 1px solid $black-custom-1;
+      //padding: 1.5rem;
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // @include respond(tab-port) {
+      //   justify-content: space-evenly;
+      //   height: auto;
+      // }
+      @include respond(phone) {
+        border-bottom: 1px solid $black-custom-1;
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        margin: 0rem auto;
+      }
+
+      &__shape {
+        //  border: 2px solid red;
+        width: 8rem;
+        height: 8rem;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-0.8rem) translateY(0.2rem) skewX(5deg);
+        position: relative;
+        object-fit: cover;
+        @include respond(tab-land) {
+          width: 10rem;
+          height: 10rem;
+          -webkit-shape-outside: circle(50% at 50% 50%);
+          shape-outside: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+          transform: translateX(-0.1rem) translateY(0rem) skewX(1.5deg);
+          object-fit: cover;
+        }
+        @include respond(tab-port) {
+          width: 10rem;
+          height: 10rem;
+          -webkit-shape-outside: circle(50% at 50% 50%);
+          shape-outside: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+          transform: translateX(-0.1rem) translateY(0rem) skewX(1.5deg);
+          object-fit: cover;
+        }
+        @include respond(phone) {
+          width: 15rem;
+          height: 15rem;
+          -webkit-shape-outside: circle(50% at 50% 50%);
+          shape-outside: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+          transform: translateX(-0.1rem) translateY(1rem) skewX(1.5deg);
+          object-fit: cover;
+          // width: 100%;
+          // height: auto;
+          // float: none;
+          // -webkit-shape-outside: none;
+          // shape-outside: none;
+          // clip-path: none;
+          // transform: none;
+          // margin-top: 2rem;
+        }
+      }
+      &__img {
+        //  border: 2px solid blue;
+        height: 90%;
+        transform: translateX(-0.2rem) translateY(1rem) scale(1.2);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: all 0.5s;
+        object-fit: cover;
+        @include respond(tab-land) {
+          transform: translateX(1.5rem) translateY(3rem) scale(1.8);
+        }
+        @include respond(tab-port) {
+          transform: translateX(1.5rem) translateY(3.2rem) scale(1.8);
+        }
+
+        @include respond(phone) {
+          width: 100%;
+          height: 100%;
+          // transform: none;
+          transform: translateX(1.2rem) translateY(3rem) scale(1.5);
+        }
+      }
+      &__caption {
+        border: 2px solid green;
+        color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: $white-color;
+        letter-spacing: 0.3rem;
+        text-align: center;
+        transition: 0.5s ease-in;
+        opacity: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      &__name {
+        // border: 2px solid green;
+        background-color: $black-custom-1;
+        padding: 0.4rem;
+        color: $white-color;
+        width: 85%;
+        transform: skewX(0deg);
+        box-shadow: 0.3rem 0.2rem 0.3rem rgba($black-custom-1, 0.8);
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: 0.1rem;
+        font-weight: 100;
+        @include respond(tab-land) {
+          width: 80%;
+          margin: 0.2rem 0rem;
+          padding: 0.5rem;
+        }
+        @include respond(tab-port) {
+          width: 80%;
+          margin: 0.2rem 0rem;
+          // padding: 1rem;
+        }
+        @include respond(phone) {
+          width: 95%;
+          margin: 2rem 0rem;
+          box-shadow: none;
+        }
+      }
+      // &__name::after {
+      //   content: "";
+      //   display: table;
+      //   width: 0rem;
+      //   height: 0rem;
+      //   background-color: $white-color;
+      //   border-left: 1px solid green;
+      //   border-right: 1px solid green;
+      //   border-top: 1px solid green;
+      //   border-bottom: 1px solid green;
+      // }
+    }
+
+    &--text {
+      width: 95%;
+      font-size: 1.6rem;
+      //  border: 1px solid blue;
+      text-align: justify;
+      margin: 2.5rem auto;
+      line-height: 2.5rem;
+      padding: 1.5rem;
+
+      @include respond(tab-port) {
+        margin: 1rem auto;
+        padding: 1rem;
+      }
+      @include respond(phone) {
+        margin: 0rem auto;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.creatorInfo {
+  // border: 5px solid pink;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 1.5rem;
+  @include respond(tab-land) {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  @include respond(tab-port) {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    margin: 0rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    margin: 0rem;
+  }
+  &-heading {
+    // border: 1px solid red;
+    font-size: 1.5rem;
+    @include respond(tab-land) {
+      width: 90%;
+      margin-left: 1rem;
+      font-size: 1.6rem;
+      padding: 0.2rem;
+    }
+
+    @include respond(tab-port) {
+      width: 90%;
+      margin-left: 1rem;
+      font-size: 1.6rem;
+      padding: 0.4rem;
+    }
+    @include respond(phone) {
+      width: 90%;
+      font-size: 1.6rem;
+      margin-left: 0.4rem;
+      padding: 0.4rem;
+    }
+  }
+  &-caption {
+    // border: 1px solid red;
+    font-weight: 300;
+    font-size: 1.4rem;
+    @include respond(tab-land) {
+      width: 90%;
+      margin-left: 1rem;
+      padding: 0.2rem;
+      color: $text-muted;
+    }
+    @include respond(tab-port) {
+      font-size: 1.4rem;
+      width: 90%;
+      margin-left: 1rem;
+      padding: 0.4rem;
+      color: $text-muted;
+    }
+    @include respond(phone) {
+      font-size: 1.4rem;
+      width: 90%;
+      margin-left: 0.4rem;
+      padding: 0.4rem;
+      color: $text-muted;
+    }
+  }
+}

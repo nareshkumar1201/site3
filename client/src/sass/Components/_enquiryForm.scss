@@ -1,0 +1,43 @@
+.form-container {
+  // border: 1px solid red;
+  margin: 3rem 0rem;
+  padding: 2rem;
+  width: 100vw;
+  @include respond(tab-port) {
+    padding: 1rem;
+  }
+  @include respond(phone) {
+    padding: 1rem;
+  }
+}
+
+.form-primary {
+  // border: 2px solid blue;
+  padding: 1rem;
+  width: 40%;
+  height: auto;
+  margin: 1rem auto;
+  @include respond(tab-port) {
+    width: 65%;
+    padding: 0.5rem;
+  }
+  @include respond(phone) {
+    width: 80%;
+  }
+  &--sub {
+    //border: 1px solid green;
+    padding: 0.5rem;
+    margin: 1rem 0rem;
+    display: flex;
+    font-size: 1.2rem;
+
+    &_input {
+      width: 100%;
+      padding: 1.2rem;
+    }
+  }
+}
+
+.form-terms {
+  color: $black-custom-1;
+}

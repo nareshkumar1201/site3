@@ -1,0 +1,31 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  @include respond(tab-land) {
+    //width< 1200
+    font-size: 56.25%; //1rem = 9px  9/16=56.25%
+  }
+
+  @include respond(tab-port) {
+    //width<900px
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $grey-color;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  margin-top: 3.8rem;
+  position: relative;
+}

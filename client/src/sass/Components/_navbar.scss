@@ -1,0 +1,77 @@
+.Navbar {
+  width: 100vw;
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  background-color: $black-custom-1;
+  box-shadow: 0.4rem 0.2rem 0.3rem rgba($black-custom-1, 0.5);
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 8889;
+
+  &-logo {
+    // border: 1px solid green;
+    width: 10vw;
+  }
+  &-container {
+    width: 80vw;
+    // border: 1px solid white;
+    display: block;
+    @include respond(tab-land) {
+      display: block;
+    }
+    @include respond(tab-port) {
+      display: block;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  &-menu {
+    width: 80%;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    align-self: right;
+    margin: 0rem 2rem;
+    float: right;
+    // @include respond(tab-land) {
+    //   // display: block;
+    // }
+    // @include respond(tab-port) {
+    //   display: none;
+    // }
+
+    // @include respond(phone) {
+    //   display: none;
+    // }
+    &--list {
+      //  border: 1px solid green;
+      width: 20%;
+      display: block;
+      text-align: center;
+      list-style: none;
+      text-decoration: none;
+      margin: 0rem 0.2rem;
+      text-align: center;
+
+      &:hover {
+        background-color: rgba($white-color, 0.8);
+      }
+
+      &__link {
+        // border: 1px solid red;
+        display: block;
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding: 1rem;
+        color: $white-color;
+        &:hover {
+          color: $black-custom-1 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.techInfo {
+  //@extend  border: 1px solid red;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0rem;
+
+  &-container {
+    //   border: 1px solid green;
+    padding: 1rem;
+    width: 95%;
+    height: auto;
+    background-color: #fff;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-heading {
+    width: 100%;
+    //  border: 1px solid blue;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0rem;
+    text-transform: uppercase;
+  }
+  &-content {
+    width: 100%;
+    //  border: 3px solid blue;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 0rem 0rem 0.4rem rgba($black-custom-1, 0.6);
+    margin-bottom: 5rem;
+    background-color: $white-color;
+    @include respond(tab-port) {
+      padding: 0.5rem;
+      flex-direction: column-reverse;
+    }
+    @include respond(phone) {
+      padding: 0.5rem;
+      flex-direction: column-reverse;
+    }
+
+    &--info {
+      //  border: 2px solid green;
+      padding: 1rem;
+      width: 60%;
+      background-color: $black-custom-1;
+      color: #fff;
+      clip-path: polygon(41% 0, 100% 0%, 100% 100%, 0% 100%);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      @include respond(tab-port) {
+        width: 100%;
+        clip-path: none;
+      }
+      @include respond(phone) {
+        width: 100%;
+        clip-path: none;
+      }
+
+      &__text {
+        //   border: 1px solid white;
+        width: 60%;
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin: 0.5rem;
+        line-height: 2.2rem;
+        padding: 1rem;
+        line-height: 2.8rem;
+        text-align: justify;
+        @include respond(tab-port) {
+          width: 100%;
+          text-align: left;
+        }
+
+        @include respond(phone) {
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+
+    &--icons {
+      // border: 1px solid red;
+      padding: 1rem;
+      width: 40%;
+
+      @include respond(tab-port) {
+        width: 60%;
+        margin: 0rem auto;
+        padding: 0.5rem;
+      }
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.fab {
+  // border: 2px solid blue;
+  font-size: 6rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  margin: 1rem;
+  @include respond(tab-port) {
+    font-size: 4rem;
+    padding: 0.5rem;
+  }
+}
+
+.fa-node {
+  color: $nodejs-color-dark;
+}
+
+.fa-js {
+  //   background-color: $js-bg-color;
+  color: $js-text-color;
+  background-color: $js-bg-color;
+}
+.fa-html5 {
+  color: $html-text-color;
+}
+.fa-css3 {
+  color: $css-text-color;
+}
+.fa-sass {
+  color: $sass-text-color;
+}
+.fa-react {
+  color: $react-text-color;
+}
+.fa-bootstrap {
+  color: $bootstrp-text-color;
+}
